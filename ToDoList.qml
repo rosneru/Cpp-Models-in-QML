@@ -1,4 +1,4 @@
-import QtQuick 2.11
+import QtQuick 2.7
 import QtQuick.Controls 2.0
 import QtQuick.Layouts 1.3
 
@@ -8,12 +8,27 @@ Frame {
     implicitHeight: 250
     clip: true
 
-    model: 100
+    model: ListModel {
+      ListElement{
+        done: true
+        description: "Wash the car"
+      }
+
+      ListElement{
+        done: false
+        description: "Fix the sink"
+      }
+    }
+
     delegate: RowLayout {
       width: parent.width
 
-      CheckBox {}
+      CheckBox {
+        checked: model.done
+      }
+
       TextField {
+        text: model.description
         Layout.fillWidth: true
       }
     }
