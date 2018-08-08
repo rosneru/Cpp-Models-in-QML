@@ -6,8 +6,8 @@
 
 struct ToDoItem
 {
-	bool done;
-	QString description;
+  bool done;
+  QString description;
 };
 
 class ToDoList : public QObject
@@ -16,21 +16,23 @@ class ToDoList : public QObject
 public:
 	explicit ToDoList(QObject *parent = nullptr);
 
-	bool setItemAt(int index, const ToDoItem &item);
+  QVector<ToDoItem> items() const;
+
+  bool setItemAt(int index, const ToDoItem &item);
 
 signals:
-	void preItemAppended();
-	void postItemAppended();
+  void preItemAppended();
+  void postItemAppended();
 
-	void preItemRemoved(int index);
-	void postItemRemoved(int index);
+  void preItemRemoved(int index);
+  void postItemRemoved(int index);
 
 public slots:
-	void appendItem();
-	void removeCompletedItems();
+  void appendItem();
+  void removeCompletedItems();
 
 private:
-	QVector<ToDoItem> m_Items;
+  QVector<ToDoItem> m_Items;
 };
 
 #endif // TODOLIST_H
