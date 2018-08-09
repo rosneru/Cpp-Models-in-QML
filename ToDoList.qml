@@ -4,35 +4,58 @@ import QtQuick.Layouts 1.3
 
 import ToDo 1.0
 
-Frame
-{
-  ListView
+ColumnLayout {
+  Frame
   {
-    implicitWidth: 250
-    implicitHeight: 250
-    clip: true
+    Layout.fillWidth: true
 
-    model: ToDoModel
+    ListView
     {
-      list: toDoList
-    }
+      implicitWidth: 250
+      implicitHeight: 250
+      clip: true
+      anchors.fill: parent
 
-    delegate: RowLayout
-    {
-      width: parent.width
-
-      CheckBox
+      model: ToDoModel
       {
-        checked: model.done
-        onClicked: model.done = checked
+        list: toDoList
       }
 
-      TextField
+      delegate: RowLayout
       {
-        text: model.description
-        onEditingFinished: model.description = text
-        Layout.fillWidth: true
+        width: parent.width
+
+        CheckBox
+        {
+          checked: model.done
+          onClicked: model.done = checked
+        }
+
+        TextField
+        {
+          text: model.description
+          onEditingFinished: model.description = text
+          Layout.fillWidth: true
+        }
       }
     }
   }
+
+  RowLayout
+  {
+    Button
+    {
+      text: qsTr("Add new item")
+      onClicked: toDoList.appendItem()
+      Layout.fillWidth: true
+    }
+
+    Button
+    {
+      text: qsTr("Remove completed")
+      onClicked: toDoList.removeCompletedItems()
+      Layout.fillWidth: true
+    }
+  }
+
 }
