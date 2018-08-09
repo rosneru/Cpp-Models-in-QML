@@ -4,25 +4,31 @@ import QtQuick.Layouts 1.3
 
 import ToDo 1.0
 
-Frame {
-  ListView {
+Frame
+{
+  ListView
+  {
     implicitWidth: 250
     implicitHeight: 250
     clip: true
 
-    model: ToDoModel {
+    model: ToDoModel
+    {
       list: toDoList
     }
 
-    delegate: RowLayout {
+    delegate: RowLayout
+    {
       width: parent.width
 
-      CheckBox {
+      CheckBox
+      {
         checked: model.done
         onClicked: model.done = checked
       }
 
-      TextField {
+      TextField
+      {
         text: model.description
         onEditingFinished: model.description = text
         Layout.fillWidth: true

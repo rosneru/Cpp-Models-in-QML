@@ -13,7 +13,8 @@ class ToDoModel : public QAbstractListModel
 public:
 	explicit ToDoModel(QObject *parent = nullptr);
 
-	enum {
+  enum
+  {
 		DoneRole = Qt::UserRole,
 		DescriptionRole
 	};
