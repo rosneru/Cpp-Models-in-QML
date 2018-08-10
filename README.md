@@ -1,20 +1,22 @@
 # README #
 
-Tutorial zum Thema QML / QtQuick / C++. Es wird eine ToDo-List-App 
-erstellt.
+Tutorial which I followed at the topic QML, QtQuick and C++. A simple 
+to-do list app is created.
 
-[Tutorial-Video auf Youtube](https://www.youtube.com/watch?v=9BcAYDlpuT8 "Using C++ Models in QML")
+[Tutorial video on Youtube](https://www.youtube.com/watch?v=9BcAYDlpuT8 "Using C++ Models in QML")
 
-### Entwicklungsumgebung ###
+The tutorial shows how an user interface is designed with QML using 
+QtQuick controls and a C++ model is bound on later.
 
-* Windows 10 Prof
+
+### Development environment ###
+
+* Windows 10 Professional
 * Qt Creator 4.7.0
 * Qt 5.11.1
-* C++ - Compiler von Visual Studio 2017
-* C++ - Debugger CDB aus dem Windows 10 - SDK 
+* C++ - Compiler of Visual Studio 2017
+* C++ - Debugger CDB of Windows 10 SDK 
 
-Damit das Projekt auch auf aktuellen Debian Stretch - Distributionen 
-(enthalten Qt 5.7) verwendet werden kann, wurde auf Kompatibilität 
-geachtet:
-* Nur unter Qt2.7 verwendete QtQuick-Controls verwendet:
-  * import QtQuick 2.7 anstatt 2.11
+For holding the sources compatible to current Debian Stretch 
+distributions only QtQuick controls at version 2.7 (instead of 2.11) 
+have been used.
