@@ -7,7 +7,7 @@ erstellt.
 
 ### Entwicklungsumgebung ###
 
-Das Projekt wurde unter Windows erstellt mit:
+* Windows 10 Prof
 * Qt Creator 4.7.0
 * Qt 5.11.1
 * C++ - Compiler von Visual Studio 2017
@@ -16,5 +16,5 @@ Das Projekt wurde unter Windows erstellt mit:
 Damit das Projekt auch auf aktuellen Debian Stretch - Distributionen 
 (enthalten Qt 5.7) verwendet werden kann, wurde auf Kompatibilität 
 geachtet:
-* Nur unter Qt2.7 verwendete QtQuick-controls verwendet:
+* Nur unter Qt2.7 verwendete QtQuick-Controls verwendet:
   * import QtQuick 2.7 anstatt 2.11
